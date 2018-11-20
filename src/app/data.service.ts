@@ -13,7 +13,7 @@ export class DataService {
   }
 
   login() {
-    return this.http.post('https://gbsantaapi.azurewebsites.net/login').pipe
+    return this.http.post('https://gbsantaapi.azurewebsites.net/login', "k")
   }
 
   register() {
