@@ -11,7 +11,7 @@ export class NavComponent implements OnInit {
 
   appTitle: string = "Santa's List"
 
-  constructor(private auth: DataService, private router: Router) { }
+  constructor(public auth: DataService, private router: Router) { }
 
   ngOnInit() {
   }
