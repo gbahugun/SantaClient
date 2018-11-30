@@ -6,14 +6,15 @@ import { ListComponent } from './list/list.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { ChildComponent } from './child/child.component';
+import { AuthGuard } from './auth.guard';
 
 const routes: Routes = [
   { path: '', component: HomeComponent},
-  { path: 'add-contact', component: AddContactComponent},
-  { path: 'list', component: ListComponent},
+  { path: 'add-contact', component: AddContactComponent, canActivate: [AuthGuard]},
+  { path: 'list', component: ListComponent, canActivate: [AuthGuard]},
   { path: 'login', component: LoginComponent},
   { path: 'register', component: RegisterComponent},
-  { path: 'child/:id', component: ChildComponent}
+  { path: 'child/:id', component: ChildComponent, canActivate: [AuthGuard]}
 ];
 
 @NgModule({
