@@ -17,24 +17,26 @@
     <th>Delete</th>
   </tr>
   <tr *ngFor="let c of list">
-    <td>{{ c.id }}</td>
-    <td>{{ c.firstName }}</td>
-    <td>{{ c.lastName }}</td>
-    <td>{{ c.birthDay | date:'yyyy-MM-dd' }}</td>
-    <td>{{ c.street }}</td>
-    <td>{{ c.city }}</td>
-    <td>{{ c.province }}</td>
-    <td>{{ c.country }}</td>
-    <td>{{ c.postalCode }}</td>
-    <td>{{ c.latitude }}</td>
-    <td>{{ c.longitude }}</td>
-    <td>{{ c.isNaughty | naughtyNice }}</td>
-    <td>{{ c.dateCreated | date:'yyyy-MM-dd' }}</td>
-    <td>
-  <button class="delete" title="delete child"
-          (click)="deleteChild(c)">
-    x
-  </button>
-  </td>
+    <a routerLink="/detail/{{c.id}}">
+      <td>{{ c.id }}</td>
+      </a>
+      <td>{{ c.firstName }}</td>
+      <td>{{ c.lastName }}</td>
+      <td>{{ c.birthDay | date:'yyyy-MM-dd' }}</td>
+      <td>{{ c.street }}</td>
+      <td>{{ c.city }}</td>
+      <td>{{ c.province }}</td>
+      <td>{{ c.country }}</td>
+      <td>{{ c.postalCode }}</td>
+      <td>{{ c.latitude }}</td>
+      <td>{{ c.longitude }}</td>
+      <td>{{ c.isNaughty | naughtyNice }}</td>
+      <td>{{ c.dateCreated | date:'yyyy-MM-dd' }}</td>
+      <td>
+        <button class="delete" title="delete child"
+                (click)="deleteChild(c)">
+          x
+        </button>
+      </td>
   </tr>
 </table>

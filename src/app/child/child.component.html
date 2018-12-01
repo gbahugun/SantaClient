@@ -1,3 +1,56 @@
-<p>
-  child works!
-</p>
+<div *ngIf="child">
+  <h2>{{ child.firstName | uppercase}} {{ child.lastName | uppercase}} Details</h2>
+  <div>
+    <label>
+      First name:
+      <input [(ngModel)]="child.firstName" placeholder="firstName" />
+    </label>
+    <label>
+      Last name:
+      <input [(ngModel)]="child.lastName" placeholder="lastName" />
+    </label>
+    <label>
+      Birthday:
+      <input [(ngModel)]="child.birthday" type="date" placeholder="birthday" />
+    </label>
+    <label>
+      Street:
+      <input [(ngModel)]="child.street" placeholder="street" />
+    </label>
+    <label>
+      City:
+      <input [(ngModel)]="child.city" placeholder="city" />
+    </label>
+    <label>
+      Province:
+      <input [(ngModel)]="child.province" placeholder="province" />
+    </label>
+    <label>
+      Country:
+      <input [(ngModel)]="child.country" placeholder="country" />
+    </label>
+    <label>
+      Postal Code:
+      <input [(ngModel)]="child.postalCode" placeholder="postalCode" />
+    </label>
+    <label>
+      Latitude:
+      <input [(ngModel)]="child.latitude" type="number" placeholder="latitude" />
+    </label>
+    <label>
+      Longitude:
+      <input [(ngModel)]="child.longitude" type="number" placeholder="longitude" />
+    </label>
+    <label>
+      Naughty or Nice:
+      <select name="Naughty or Nice" [(ngModel)]="child.isNaughty" placeholder="isNaughty">
+        <option value="true">Naughty</option>
+        <option value="false">Nice</option>
+      </select>
+    </label>
+  </div>
+  <button (click)="save()">save</button>
+  <br />
+  <br />
+  <button (click)="goBack()">go back</button>
+</div>
