@@ -45,20 +45,17 @@ export class DataService {
     const url = `${this.URL}/api/children`;
     return this.http.get(url)
       .pipe(
-        map(
-          (res: Response) => res.json()
-        )
+        catchError(this.handleError)
       );
   }
 
   /** GET hero by id. Will 404 if id not found */
   getChild(id: number): Observable<Child> {
     const url = `${this.URL}/api/children/${id}`;
-    return this.http.get(url).pipe(
-      map(
-        (res: Response) => res.json()
-      )
-    );
+    return this.http.get(url)
+      .pipe(
+        catchError(this.handleError)
+      );
   }
 
   /** POST: add a new hero to the database */

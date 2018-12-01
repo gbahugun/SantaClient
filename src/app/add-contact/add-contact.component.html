@@ -1,3 +1,44 @@
-<p>
-  add-contact works!
-</p>
+<h2 id="title">Add Contact</h2>
+<form [formGroup]="childForm" (ngSubmit)="onSubmit()">
+  <label>
+    First Name:
+    <input type="text" formControlName="firstName" />
+  </label>
+  <label>
+    Last Name:
+    <input type="text" formControlName="lastName" />
+  </label>
+  <label>
+    Birthday:
+    <input type="date" formControlName="birthday" />
+  </label>
+  <label>
+    Street:
+    <input type="text" formControlName="street" />
+  </label>
+  <label>
+    City:
+    <input type="text" formControlName="city" />
+  </label>
+  <label>
+    Province:
+    <input type="text" formControlName="province" />
+  </label>
+  <label>
+    Country:
+    <input type="text" formControlName="country" />
+  </label>
+  <label>
+    Postal Code:
+    <input type="text" formControlName="postalCode" />
+  </label>
+  <label>
+    Latitude:
+    <input type="number" formControlName="latitude" />
+  </label>
+  <label>
+    Longitude:
+    <input type="number" formControlName="longitude" />
+  </label>
+  <button type="submit">Submit</button>
+</form>

@@ -11,7 +11,7 @@ import { NavComponent } from './nav/nav.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { AddContactComponent } from './add-contact/add-contact.component';
-import { ListComponent } from './list/list.component';
+import { ListComponent, NaughtyNicePipe } from './list/list.component';
 import { HomeComponent } from './home/home.component';
 import { ChildComponent } from './child/child.component';
 import { AuthGuard } from './auth.guard';
@@ -30,7 +30,8 @@ export function tokenGetter() {
     AddContactComponent,
     ListComponent,
     HomeComponent,
-    ChildComponent
+    ChildComponent,
+    NaughtyNicePipe
   ],
   imports: [
     BrowserModule,
@@ -41,7 +42,7 @@ export function tokenGetter() {
     JwtModule.forRoot({
       config: {
         tokenGetter: tokenGetter,
-        whitelistedDomains: ['https://gbsantaapi.azurewebsites.net/'],
+        whitelistedDomains: ['gbsanta.azurewebsites.net'],
       }
     })
   ],
