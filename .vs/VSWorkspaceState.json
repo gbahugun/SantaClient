@@ -1,12 +1,15 @@
 {
   "ExpandedNodes": [
     "",
+    "\\dist",
+    "\\dist\\SantaClient",
     "\\src",
     "\\src\\app",
     "\\src\\app\\add-contact",
+    "\\src\\app\\child",
     "\\src\\app\\list",
     "\\src\\app\\login"
   ],
-  "SelectedNode": "\\src\\app\\add-contact\\add-contact.component.scss",
+  "SelectedNode": "\\src\\app\\auth.guard.ts",
   "PreviewInSolutionExplorer": false
 }
